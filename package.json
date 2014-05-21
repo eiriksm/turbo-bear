@@ -8,6 +8,7 @@
     "request": "~2.36.0"
   },
   "devDependencies": {
+    "coveralls": "^2.10.0",
     "istanbul": "^0.2.10",
     "mocha": "^1.19.0",
     "should": "^3.3.1"
