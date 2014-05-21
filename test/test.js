@@ -13,7 +13,7 @@ describe('Functionality', function() {
 			err.toString().should.equal(new Error('Bad config!').toString());
 		}
 	});
-	it('Should do something when "doin it" with good config', function() {
+	it('Should do something when "doin it" with good config', function(done) {
   	var os = require('os');
 		var ifaces = os.networkInterfaces(), iface;
 		// Just take one. 
@@ -35,9 +35,23 @@ describe('Functionality', function() {
 			i(c);
 		}
 		catch(err) {
-			console.log(err);
+			// Just calling the callback for coverage.
+			try {
+				c.callback(new Error('test'));
+			}
+			catch (err) {
+			}
+			try {
+				c.callback(null, {statusCode: 401});				
+			}
+			catch (err) {
+			}
+			c.callback(null, {random: 'stuff'})
 		}
 		c.iface = iface;
+		c.callback = function(err, res, val) {
+			done(err);
+		}
 		i(c);
 	});
 });
