@@ -4,14 +4,14 @@
   "description": "turbo-bear ==========",
   "main": "ip.js",
   "dependencies": {
-    "local-ip": "0.0.0",
+    "local-ip": "0.0.1",
     "request": "~2.36.0"
   },
   "devDependencies": {
+    "istanbul": "^0.2.11",
     "coveralls": "^2.10.0",
-    "istanbul": "^0.2.10",
-    "mocha": "^1.19.0",
-    "should": "^3.3.1"
+    "mocha": "^1.20.1",
+    "should": "^4.0.4"
   },
   "scripts": {
     "test": "make test"
@@ -21,7 +21,7 @@
     "url": "git://github.com/eiriksm/turbo-bear"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/eiriksm/turbo-bear/issues"
   },
