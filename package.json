@@ -1,20 +1,22 @@
 {
   "name": "turbo-bear",
   "version": "1.0.0",
-  "description": "turbo-bear ==========",
+  "description": "turbo-bear",
   "main": "ip.js",
   "dependencies": {
     "local-ip": "1.0.1",
-    "request": "~2.55.0"
+    "request": "~2.67.0"
   },
   "devDependencies": {
-    "istanbul": "^0.3.13",
-    "coveralls": "^2.11.2",
-    "mocha": "^2.2.4",
-    "should": "^6.0.1"
+    "coveralls": "^2.11.6",
+    "eslint": "^1.10.3",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4",
+    "should": "^8.0.2"
   },
   "scripts": {
-    "test": "make test"
+    "test": "npm run lint && mocha",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",

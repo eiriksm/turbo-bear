@@ -1,3 +1,4 @@
+'use strict';
 module.exports = function(config) {
   var localip = require('local-ip');
   var util = require('util');
@@ -9,14 +10,13 @@ module.exports = function(config) {
 
   localip(config.iface, function(err, res) {
     if (!config.callback) {
-      config.callback = function(err, res, body) {
+      config.callback = function(err, res) {
         if (err) {
           throw new Error('Problem: ' + err);
         }
         if (res.statusCode === 401) {
           throw new Error('Probably bad credentials.');
         }
-        console.log('All good');
       }
     }
     if (err) {

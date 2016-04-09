@@ -1,4 +1,4 @@
-var should = require('should');
+require('should');
 var i = require('../ip');
 
 describe('Functionality', function() {
@@ -32,16 +32,18 @@ describe('Functionality', function() {
         c.callback(new Error('test'));
       }
       catch (err) {
+        err.should.not.equal(undefined);
       }
       try {
         c.callback(null, {statusCode: 401});
       }
       catch (err) {
+        err.should.not.equal(undefined);
       }
       c.callback(null, {random: 'stuff'});
     }
     c.iface = iface;
-    c.callback = function(err, res, val) {
+    c.callback = function(err) {
       done(err);
     };
     i(c);
