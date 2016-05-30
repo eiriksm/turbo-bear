@@ -12,7 +12,7 @@
     "eslint": "^2.7.0",
     "istanbul": "^0.4.1",
     "mocha": "^2.3.4",
-    "should": "^8.0.2"
+    "should": "^9.0.0"
   },
   "scripts": {
     "test": "npm run lint && mocha",
