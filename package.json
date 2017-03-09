@@ -5,7 +5,7 @@
   "main": "ip.js",
   "dependencies": {
     "local-ip": "1.0.1",
-    "request": "~2.80.0"
+    "request": "~2.81.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.6",
