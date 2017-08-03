@@ -4,7 +4,7 @@
   "description": "turbo-bear",
   "main": "ip.js",
   "dependencies": {
-    "local-ip": "1.0.1",
+    "local-ip": "2.0.0",
     "request": "~2.81.0"
   },
   "devDependencies": {
