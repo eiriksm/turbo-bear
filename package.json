@@ -8,7 +8,7 @@
     "request": "~2.83.0"
   },
   "devDependencies": {
-    "coveralls": "^2.11.6",
+    "coveralls": "^3.0.0",
     "eslint": "^4.1.0",
     "istanbul": "^0.4.1",
     "mocha": "^3.0.0",
